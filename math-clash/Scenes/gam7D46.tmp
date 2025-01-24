@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://5ieoye1hpbe3"]
+
+[ext_resource type="Texture2D" uid="uid://bfsfarkvb0dyv" path="res://Textures/backgroundneon.jpg" id="1_1cbf2"]
+[ext_resource type="Script" path="res://Scenes/Game.gd" id="1_xca6i"]
+[ext_resource type="Texture2D" uid="uid://bnoecwkmlq7hk" path="res://Textures/frog.png" id="3_02ulq"]
+[ext_resource type="Script" path="res://Scenes/input.gd" id="4_o4ue0"]
+[ext_resource type="Script" path="res://Scenes/enemy_sprite.gd" id="5_uob03"]
+[ext_resource type="Texture2D" uid="uid://dsx72jhkhg8b" path="res://Textures/icon.svg" id="6_7ymbx"]
+[ext_resource type="Script" path="res://Scenes/health_bar.gd" id="7_1384m"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_xca6i")
+
+[node name="background" type="Sprite2D" parent="."]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(584.444, 324)
+scale = Vector2(1.47111, 1.47111)
+texture = ExtResource("1_1cbf2")
+
+[node name="Frog" type="Sprite2D" parent="."]
+position = Vector2(583.25, 325.75)
+scale = Vector2(0.309722, 0.309722)
+texture = ExtResource("3_02ulq")
+
+[node name="enemy" type="Node2D" parent="."]
+
+[node name="enemy_sprite" type="Sprite2D" parent="enemy"]
+texture = ExtResource("6_7ymbx")
+script = ExtResource("5_uob03")
+
+[node name="input" type="LineEdit" parent="."]
+offset_left = 515.0
+offset_top = 432.0
+offset_right = 653.0
+offset_bottom = 501.0
+alignment = 1
+max_length = 4
+script = ExtResource("4_o4ue0")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 579.0
+offset_top = 391.0
+offset_right = 588.0
+offset_bottom = 417.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 579.0
+offset_top = 203.0
+offset_right = 588.0
+offset_bottom = 229.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_right = 225.0
+offset_bottom = 26.0
+max_value = 5.0
+step = 1.0
+fill_mode = 1
+show_percentage = false
+script = ExtResource("7_1384m")
+
+[connection signal="text_submitted" from="input" to="." method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="input" to="enemy/enemy_sprite" method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="input" to="input" method="_on_text_submitted"]

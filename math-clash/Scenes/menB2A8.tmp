@@ -1,0 +1,103 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5lwa6j6k6nur"]
+
+[ext_resource type="Script" path="res://Scenes/button.gd" id="1_swkt7"]
+[ext_resource type="Script" path="res://Scenes/last_score.gd" id="2_5q63e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4cmi"]
+bg_color = Color(0.27611, 0.308732, 0.366462, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trtxm"]
+bg_color = Color(0.541098, 0.459666, 0.197642, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4esow"]
+bg_color = Color(0.545803, 0.631557, 0.501512, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 20
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_c4cmi")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = 46.0
+offset_right = 270.0
+offset_bottom = 232.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/hover = SubResource("StyleBoxFlat_trtxm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4esow")
+text = "Start"
+script = ExtResource("1_swkt7")
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -214.0
+offset_top = 68.0
+offset_right = 214.0
+offset_bottom = 108.0
+grow_horizontal = 2
+
+[node name="LastScore" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.5
+offset_top = -103.5
+offset_right = 133.5
+offset_bottom = -48.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_5q63e")
+
+[node name="HighScore" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -133.5
+offset_top = 45.0
+offset_right = 133.5
+offset_bottom = 100.0
+grow_horizontal = 2
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

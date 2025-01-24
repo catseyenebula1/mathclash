@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://clvbcy4tpywvs"]
+
+[ext_resource type="Texture2D" uid="uid://dsx72jhkhg8b" path="res://Textures/icon.svg" id="1_ibtgq"]
+[ext_resource type="Script" path="res://attack_player.gd" id="2_8t4o6"]
+
+[node name="enemy" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -2)
+texture = ExtResource("1_ibtgq")
+script = ExtResource("2_8t4o6")
