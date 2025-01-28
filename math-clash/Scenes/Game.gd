@@ -1,14 +1,14 @@
 extends Node2D
 var rng = RandomNumberGenerator.new()
 var number = [1,2,3,4,5,6,7,8,9,10]
-var operation = ["+","-","*","/"]
+var operation = ["+","-","*"]
 @onready var label: Label = $Label
 @onready var scoreDisplay: Label = $Score
 var random_Number1 = 0
 var random_Number2 = 0
 var operate = ""
 var correct = 0
-var score = 0
+@onready var player = $player
 
 var enemy_node
 var lives 
@@ -27,12 +27,14 @@ func _ready() -> void:
 	label.text = str(random_Number1) + " " + operate + " " + str(random_Number2) 
 	print("entered")
 	
-	enemy_node = $enemy/enemy_sprite
+	enemy_node = $enemy/enemtSpriteAnimated
 	lives = $HealthBar
-	scoreDisplay.text = str(score)
+	scoreDisplay.text = str(global.score)
 
 func _process(delta: float) -> void:
 		if(enemy_node._isTouching()):
+			player._hurt()
+			$Hurt.play()
 			lives._lowerHealth()
 			enemy_node._ready()
 
@@ -48,11 +50,17 @@ func _on_input_text_submitted(new_text: String) -> void:
 			correct = random_Number1 / random_Number2
 	
 	if (float(new_text) == correct):
-		score += 1
-		print (score)
+		global.score += 1
+		print (global.score)
 		enemy_node._lower_speed()
+		enemy_node._ready()
+		player._swing()
+		$Correct.play()
 	else:
 		lives._lowerHealth()
+		$Wrong.play()
+		$Hurt.play()
+		player._hurt()
 		print("wrong")
 	_ready()
 	

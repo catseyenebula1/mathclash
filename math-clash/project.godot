@@ -17,7 +17,13 @@ config/icon="res://Textures/icon.svg"
 
 [autoload]
 
-Global="*res://autoloads/global.gd"
+global="*res://autoloads/global.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1080
+window/size/resizable=false
 
 [rendering]
 

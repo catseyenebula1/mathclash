@@ -18,4 +18,6 @@ func _lowerHealth():
 		_endGame()
 		
 func _endGame():
+	if (global.score > global.highScore):
+		global.highScore = global.score
 	get_tree().change_scene_to_file("res://Scenes/menu.tscn")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5lwa6j6k6nur"]
+[gd_scene load_steps=9 format=3 uid="uid://b5lwa6j6k6nur"]
 
 [ext_resource type="Script" path="res://Scenes/button.gd" id="1_swkt7"]
 [ext_resource type="Script" path="res://Scenes/last_score.gd" id="2_5q63e"]
+[ext_resource type="Script" path="res://Scenes/high_score.gd" id="3_ywefr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c4cmi"]
 bg_color = Color(0.27611, 0.308732, 0.366462, 1)
@@ -25,6 +26,16 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 corner_detail = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_np7ix"]
+font_size = 64
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n41vs"]
+font_size = 64
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -81,23 +92,32 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -133.5
-offset_top = -103.5
-offset_right = 133.5
-offset_bottom = -48.5
+offset_left = -163.0
+offset_top = -95.0
+offset_right = 163.0
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
+label_settings = SubResource("LabelSettings_np7ix")
+horizontal_alignment = 1
 script = ExtResource("2_5q63e")
 
 [node name="HighScore" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 5
+anchors_preset = 8
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-offset_left = -133.5
-offset_top = 45.0
-offset_right = 133.5
-offset_bottom = 100.0
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = -250.5
+offset_right = 154.0
+offset_bottom = -147.5
 grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_n41vs")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_ywefr")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,12 +1,205 @@
-[gd_scene load_steps=8 format=3 uid="uid://5ieoye1hpbe3"]
+[gd_scene load_steps=54 format=3 uid="uid://5ieoye1hpbe3"]
 
-[ext_resource type="Texture2D" uid="uid://bfsfarkvb0dyv" path="res://Textures/backgroundneon.jpg" id="1_1cbf2"]
 [ext_resource type="Script" path="res://Scenes/Game.gd" id="1_xca6i"]
-[ext_resource type="Texture2D" uid="uid://bnoecwkmlq7hk" path="res://Textures/frog.png" id="3_02ulq"]
+[ext_resource type="Texture2D" uid="uid://yeg6yemlyr77" path="res://Textures/grass_template2.jpg" id="2_0b23k"]
+[ext_resource type="Texture2D" uid="uid://c8g718ho5mie8" path="res://Textures/Free RPG Sprites/PNG_/SLIME04/01-Idle/FR_Slime4_Idle_000.png" id="4_6eja7"]
 [ext_resource type="Script" path="res://Scenes/input.gd" id="4_o4ue0"]
-[ext_resource type="Script" path="res://Scenes/enemy_sprite.gd" id="5_uob03"]
-[ext_resource type="Texture2D" uid="uid://dsx72jhkhg8b" path="res://Textures/icon.svg" id="6_7ymbx"]
+[ext_resource type="Texture2D" uid="uid://b8qeup4nrl6bj" path="res://Textures/Free RPG Sprites/PNG_/SLIME04/01-Idle/FR_Slime4_Idle_001.png" id="5_q4om1"]
+[ext_resource type="Texture2D" uid="uid://blhfs3eu54tjd" path="res://Textures/Free RPG Sprites/PNG_/SLIME04/01-Idle/FR_Slime4_Idle_002.png" id="6_0msb6"]
+[ext_resource type="Texture2D" uid="uid://c8jopneymhy8p" path="res://Textures/Free RPG Sprites/PNG_/SLIME04/01-Idle/FR_Slime4_Idle_003.png" id="7_5btgh"]
 [ext_resource type="Script" path="res://Scenes/health_bar.gd" id="7_1384m"]
+[ext_resource type="Texture2D" uid="uid://1dxg4fvvd8b7" path="res://Textures/Free RPG Sprites/PNG_/SLIME04/01-Idle/FR_Slime4_Idle_004.png" id="8_bgeht"]
+[ext_resource type="Texture2D" uid="uid://dkk7u4l8us30r" path="res://Textures/Free RPG Sprites/PNG_/SLIME04/01-Idle/FR_Slime4_Idle_005.png" id="9_8kyvw"]
+[ext_resource type="Texture2D" uid="uid://cqhwmedvi6mde" path="res://Textures/Free RPG Sprites/PNG_/SLIME04/01-Idle/FR_Slime4_Idle_006.png" id="10_m3d5l"]
+[ext_resource type="Texture2D" uid="uid://jy4mi43qix6o" path="res://Textures/Free RPG Sprites/PNG_/SLIME04/01-Idle/FR_Slime4_Idle_007.png" id="11_8hyh7"]
+[ext_resource type="Texture2D" uid="uid://bynckhced53cp" path="res://Textures/Free RPG Sprites/PNG_/SLIME04/01-Idle/FR_Slime4_Idle_008.png" id="12_8gvb2"]
+[ext_resource type="Texture2D" uid="uid://c6558q4adjt4v" path="res://Textures/Free RPG Sprites/PNG_/SLIME04/01-Idle/FR_Slime4_Idle_009.png" id="13_e1cd1"]
+[ext_resource type="Texture2D" uid="uid://bx11qm74orl41" path="res://Textures/Free RPG Sprites/PNG_/SLIME04/01-Idle/FR_Slime4_Idle_010.png" id="14_0thue"]
+[ext_resource type="Texture2D" uid="uid://ba7rh2g2vdpim" path="res://Textures/Free RPG Sprites/PNG_/SLIME04/01-Idle/FR_Slime4_Idle_011.png" id="15_yi3dv"]
+[ext_resource type="Script" path="res://Scenes/enemt_sprite_animated.gd" id="16_qv8kb"]
+[ext_resource type="Texture2D" uid="uid://b2dqljf0iub3e" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/01-Idle/Normal/FR_Adventurer_Idle_000.png" id="17_fi7de"]
+[ext_resource type="Texture2D" uid="uid://kd13f6crk5ff" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/01-Idle/Normal/FR_Adventurer_Idle_001.png" id="18_jxw60"]
+[ext_resource type="Texture2D" uid="uid://blkbk6kptgayy" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/01-Idle/Normal/FR_Adventurer_Idle_002.png" id="19_jstdw"]
+[ext_resource type="Texture2D" uid="uid://dce46rdvnovrr" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/01-Idle/Normal/FR_Adventurer_Idle_003.png" id="20_rmj1v"]
+[ext_resource type="Texture2D" uid="uid://ddgyl6p4djk7r" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/01-Idle/Normal/FR_Adventurer_Idle_004.png" id="21_vs1o1"]
+[ext_resource type="Texture2D" uid="uid://cct7uty82gf5t" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/01-Idle/Normal/FR_Adventurer_Idle_005.png" id="22_ybw8n"]
+[ext_resource type="Texture2D" uid="uid://cpck26xlvj0l6" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/01-Idle/Normal/FR_Adventurer_Idle_006.png" id="23_lclxf"]
+[ext_resource type="Texture2D" uid="uid://b06vkmdkorta2" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/01-Idle/Normal/FR_Adventurer_Idle_007.png" id="24_h02nl"]
+[ext_resource type="Texture2D" uid="uid://ejnpsc1e0xao" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/01-Idle/Normal/FR_Adventurer_Idle_008.png" id="25_1wctt"]
+[ext_resource type="Texture2D" uid="uid://cssrwsp76ps3o" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/01-Idle/Normal/FR_Adventurer_Idle_009.png" id="26_x2q40"]
+[ext_resource type="Texture2D" uid="uid://dh1xu4fuhlpyu" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/01-Idle/Normal/FR_Adventurer_Idle_010.png" id="27_bbn51"]
+[ext_resource type="Texture2D" uid="uid://b4stignojk6p7" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/01-Idle/Normal/FR_Adventurer_Idle_011.png" id="28_ham4f"]
+[ext_resource type="Texture2D" uid="uid://dyfy13jlytlom" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/03-Slash/FR_Adventurer_Slash_000.png" id="29_0hv6j"]
+[ext_resource type="Texture2D" uid="uid://cv3ietwpm3ljh" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/06-Hurt/FR_Adventurer_Hurt_000.png" id="29_bhsum"]
+[ext_resource type="Script" path="res://Scenes/player.gd" id="29_wl5og"]
+[ext_resource type="Texture2D" uid="uid://bixsul3phkqx0" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/06-Hurt/FR_Adventurer_Hurt_001.png" id="30_vte5k"]
+[ext_resource type="Texture2D" uid="uid://dyf3gp0ob4xyt" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/03-Slash/FR_Adventurer_Slash_001.png" id="30_wxprp"]
+[ext_resource type="Texture2D" uid="uid://bkpdvj1m5lf48" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/03-Slash/FR_Adventurer_Slash_002.png" id="31_0g8np"]
+[ext_resource type="Texture2D" uid="uid://kiytxyh8iftb" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/06-Hurt/FR_Adventurer_Hurt_002.png" id="31_xke4l"]
+[ext_resource type="Texture2D" uid="uid://dwok7q7cc1ogl" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/06-Hurt/FR_Adventurer_Hurt_003.png" id="32_ohyt5"]
+[ext_resource type="Texture2D" uid="uid://ep7ghwjh58tr" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/03-Slash/FR_Adventurer_Slash_003.png" id="32_s4f7u"]
+[ext_resource type="Texture2D" uid="uid://dml736rk845ih" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/03-Slash/FR_Adventurer_Slash_004.png" id="33_06qyc"]
+[ext_resource type="Texture2D" uid="uid://df2qlfbgy4s3h" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/06-Hurt/FR_Adventurer_Hurt_004.png" id="33_sni47"]
+[ext_resource type="Texture2D" uid="uid://c1kegn0e6kwd7" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/03-Slash/FR_Adventurer_Slash_005.png" id="34_277at"]
+[ext_resource type="Texture2D" uid="uid://dm8dpi3jobf4" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/06-Hurt/FR_Adventurer_Hurt_005.png" id="34_f8prx"]
+[ext_resource type="Texture2D" uid="uid://d1ybpumlyfboj" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/03-Slash/FR_Adventurer_Slash_006.png" id="35_0tlhg"]
+[ext_resource type="Texture2D" uid="uid://dpk0t3ro1256k" path="res://Textures/Free RPG Sprites/PNG_/ADVENTURER/03-Slash/FR_Adventurer_Slash_007.png" id="36_4lcpm"]
+[ext_resource type="AudioStream" uid="uid://fo4dkx4nf84x" path="res://Sounds/correct.wav" id="45_vskxo"]
+[ext_resource type="AudioStream" uid="uid://bi4cymw2cvgkg" path="res://Sounds/wrong.wav" id="46_vj2hg"]
+[ext_resource type="AudioStream" uid="uid://dgxa4ubw1gts6" path="res://Sounds/Hurt.wav" id="47_1vhpb"]
+[ext_resource type="AudioStream" uid="uid://ba2xl8opvran3" path="res://Sounds/GameOver.wav" id="48_2bg2q"]
+[ext_resource type="AudioStream" uid="uid://d3x5caf136yvl" path="res://Sounds/Music.wav" id="49_8lhyi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l8per"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_6eja7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_q4om1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0msb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5btgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bgeht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8kyvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_m3d5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8hyh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8gvb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_e1cd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_0thue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_yi3dv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7s4cl"]
+font_size = 64
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qvnan"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_fi7de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_jxw60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_jstdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_rmj1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vs1o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ybw8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_lclxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_h02nl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_1wctt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_x2q40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_bbn51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ham4f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_bhsum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_vte5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_xke4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_ohyt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_sni47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_f8prx")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_0hv6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_wxprp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_0g8np")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_s4f7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_06qyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_277at")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_0tlhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_4lcpm")
+}],
+"loop": false,
+"name": &"swing",
+"speed": 16.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_13us6"]
+font_size = 70
+font_color = Color(1, 0.52549, 0, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_xca6i")
@@ -14,28 +207,28 @@ script = ExtResource("1_xca6i")
 [node name="background" type="Sprite2D" parent="."]
 light_mask = 3
 visibility_layer = 3
-position = Vector2(584.444, 324)
-scale = Vector2(1.47111, 1.47111)
-texture = ExtResource("1_1cbf2")
-
-[node name="Frog" type="Sprite2D" parent="."]
-position = Vector2(583.25, 325.75)
-scale = Vector2(0.309722, 0.309722)
-texture = ExtResource("3_02ulq")
+position = Vector2(552.333, 551)
+scale = Vector2(0.86198, 1.53611)
+texture = ExtResource("2_0b23k")
 
 [node name="enemy" type="Node2D" parent="."]
 
-[node name="enemy_sprite" type="Sprite2D" parent="enemy"]
-texture = ExtResource("6_7ymbx")
-script = ExtResource("5_uob03")
+[node name="enemtSpriteAnimated" type="AnimatedSprite2D" parent="enemy"]
+position = Vector2(0, -1)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_l8per")
+frame_progress = 0.328261
+script = ExtResource("16_qv8kb")
 
 [node name="input" type="LineEdit" parent="."]
-offset_left = 515.0
-offset_top = 432.0
-offset_right = 653.0
-offset_bottom = 501.0
+offset_left = 408.0
+offset_top = 640.0
+offset_right = 656.0
+offset_bottom = 752.0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 50
 alignment = 1
-max_length = 4
+max_length = 3
 script = ExtResource("4_o4ue0")
 
 [node name="Label" type="Label" parent="."]
@@ -44,13 +237,25 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 579.0
-offset_top = 391.0
-offset_right = 588.0
-offset_bottom = 417.0
+offset_left = 528.0
+offset_top = 382.0
+offset_right = 541.0
+offset_bottom = 427.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_7s4cl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="player" type="AnimatedSprite2D" parent="."]
+position = Vector2(540, 540)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_qvnan")
+animation = &"hurt"
+frame = 5
+frame_progress = 1.0
+script = ExtResource("29_wl5og")
 
 [node name="Score" type="Label" parent="."]
 anchors_preset = 8
@@ -58,13 +263,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 579.0
-offset_top = 203.0
-offset_right = 588.0
-offset_bottom = 229.0
+offset_left = 540.0
+offset_top = 193.5
+offset_right = 549.0
+offset_bottom = 238.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_13us6")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 anchors_preset = 15
@@ -72,15 +280,32 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 17.0
 offset_top = 12.0
-offset_right = 351.0
-offset_bottom = 38.0
+offset_right = 488.0
+offset_bottom = 104.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
 max_value = 5.0
 step = 1.0
-fill_mode = 1
 script = ExtResource("7_1384m")
 
+[node name="Correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("45_vskxo")
+
+[node name="Wrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("46_vj2hg")
+
+[node name="Hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("47_1vhpb")
+
+[node name="GameOver" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("48_2bg2q")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("49_8lhyi")
+autoplay = true
+
 [connection signal="text_submitted" from="input" to="." method="_on_input_text_submitted"]
-[connection signal="text_submitted" from="input" to="enemy/enemy_sprite" method="_on_input_text_submitted"]
 [connection signal="text_submitted" from="input" to="input" method="_on_text_submitted"]
+[connection signal="animation_finished" from="player" to="player" method="_on_animation_finished"]
